@@ -1,0 +1,237 @@
+:root{
+    --primary: #fea116;
+    --light: #f1f8ff;
+    --dark: #0f172b;
+}
+
+body{
+    background-color: #ffff;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav-title{
+    text-decoration: none;
+}
+
+.top-info {
+    font-size: 14px;
+}
+
+.top-info > i{
+    font-size: 12px;
+    color: var(--primary);
+}
+
+.icon-24 {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.premium-heading {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.premium-heading > i {
+    margin-left: 8px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+/* Center the booking form on larger screens */
+.booking-form {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 90%; /* Placed over the carousel */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.navbar-toggler-icon {
+    background-image: none; /* Varsayılan simgeyi kaldır */
+    border: 1px solid white; /* Beyaz kenarlık (isteğe bağlı) */
+}
+
+.navbar-toggler-icon::before {
+    content: '\2630';
+    color: white; 
+    font-size: 1.5rem; 
+}
+
+
+@media screen and (max-width: 991px) {
+    .booking-form {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+    .premium-version-container {
+        width: auto; 
+        max-width: 80%; 
+        margin: 0 auto; 
+        border-radius: 8px;
+    }
+    .explore-btn{
+        width: 200px;
+    }
+    
+}
+
+
+.book-btn,
+.book-btn:hover{
+    background-color: var(--dark);
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:active {
+    color: var(--primary) !important; /* Override default blue color */
+}
+
+.section-title{
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.about-icon{
+    font-size: 36px;
+    color: var(--primary);
+}
+
+.room-title{
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.price-info-card {
+    padding: 5px;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: 0;
+    left: 10px; /* Burada "right: 10;" yerine "right: 10px;" kullanılmalı */
+    color: white; /* Yazı rengini beyaz yapabilirsiniz, tercihe bağlı */
+    border-radius: 3px; /* Kenarları hafif yuvarlatmak için */
+}
+
+.room-name{
+    font-weight: 700;
+}
+
+.fa-star{
+    color: var(--primary);
+}
+
+.room-info-wrapper{
+    margin-inline: 5px;
+    border-right: 1px solid gray;
+    padding-right: 12px;
+}
+.room-info-wrapper > i {
+    color: var(--primary);
+}
+
+.services-icon{
+    font-size: 24px;
+    color: var(--primary);
+    margin: 6px;
+}
+
+.service-card:hover {
+    background-color: var(--primary);
+    transition: .3s;
+}
+
+.service-card:hover .services-icon,
+.service-card:hover .service-title,
+.service-card:hover .service-desc {
+    color: white;
+    transition: .3s;
+}
+
+.icon-container {
+    position: absolute;
+    bottom: 0px; /* Distance from the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%); /* Center the icons horizontally */
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.icon-wrappper {
+    background-color: var(--primary);
+    cursor: pointer;
+    margin-inline: 6px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.team-icon {
+    color: white;
+    margin-left: 4px;
+}
+
+.footer-hotel-info{
+    background-color: var(--primary);
+}
+
+.footer-info-wrapper{
+    margin-block: 4px;
+    cursor: pointer;
+}
+
+.footer-icon{
+    color: white;
+}
+
+.footer-info-text{
+    margin-left: 8px;
+    color: white;
+}
+
+.footer-bottom-icon-wrapper{
+    margin-inline: 5px;
+}
+
+.footer-bottom-icon-wrapper > a{
+    color: white;
+    font-size: 36px;
+}
+
+@media screen and (max-width: 991px) {
+    .top-info{
+        margin-block: 8px;
+    }   
+    .top-icon-container{
+        margin-block: 8px;
+
+    }
+    .premium-version-container{
+        padding-block: 16px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    
+}

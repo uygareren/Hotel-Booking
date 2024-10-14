@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <!-- NAVBAR -->
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-lg-3 bg-dark">
+                <a href="#" class="text-decoration-none w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center" >
+                    <h1 class="nav-title m-0 text-primary text-uppercase text-warning">Hotel Book</h1>
+                </a>
+            </div>
+
+            <div class="col-lg-9" >
+                <div class="row" >
+                    <div class="col-lg-9 py-2">
+                        <div class="row">
+                            <div class="top-info col-md-4 text-center">
+                                <span class="top-info">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    info@example.com
+                                </span>
+                               
+                            </div>
+                            <div class="top-info col-md-4 text-center">
+                                <span class="top-info ms-3">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +012 345 6789
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-icon-container col-lg-3 d-flex align-items-center justify-content-center " >
+                        <span class="mx-2">
+                            <i class="fa-brands fa-square-instagram icon-24"></i>
+                        </span>
+                        <span class="mx-2">
+                            <i class="fa-brands fa-square-twitter icon-24"></i>
+                        </span>
+                        <span class="mx-2">
+                            <i class="fa-brands fa-linkedin-in icon-24"></i>                
+                        </span>
+                    </div>
+                </div>
+                <div class="row bg-dark" style=" position: relative;">
+                    <!-- Navbar section -->
+                    <div class="col-lg-9 d-flex align-items-center">
+                        <nav class="navbar navbar-expand-lg bg-dark w-100">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    
+                    <!-- Premium Version section -->
+                    <div class="premium-version-container col-md-3 d-flex align-items-center justify-content-center bg-warning">
+                        <a href="#" class="text-decoration-none w-100 d-flex align-items-center justify-content-center">
+                            <h1 class="premium-heading">
+                                Premium Version 
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <!-- CAROUSEL -->
+   <div class="container-fluid p-0 mb-5">
+    <div class="carousel slide" id="header-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner" style="max-height: 85vh;">
+            <div class="carousel-item active" style="height: 85vh; position: relative;">
+                <img src="./img/carousel-1.jpg" alt="Luxury Living" class="w-100 h-100" style="object-fit: cover;">
+                <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="z-index: 2;">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="height: 85vh; position: relative;">
+                <img src="./img/carousel-2.jpg" alt="Luxury Living" class="w-100 h-100" style="object-fit: cover;">
+                <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="z-index: 2;">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Booking Section -->
+    <div class="row booking-form" id="booking-section">
+        <div class="col-md-10">
+            <div class="row shadow-lg g-0">
+                <div class="col-md-10  py-3 px-2" style="background-color: white;">
+                    <div class="row g-2">
+                        <div class="col-md-3 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Check-in" id="datepicker1">
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Check-out" id="datepicker2">
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <select class="form-select">
+                                <option value="1" selected>Adult</option>
+                                <option value="2">Adult 1</option>
+                                <option value="3">Adult 2</option>
+                                <option value="4">Adult 3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <select class="form-select">
+                                <option value="1" selected>Child</option>
+                                <option value="2">Child 1</option>
+                                <option value="3">Child 2</option>
+                                <option value="4">Child 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12 d-flex align-items-center" style="background-color: white;">
+                    <a href="#" class="btn btn-warning w-100 text-center text-white fw-bold text-uppercase">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ABOUT -->
+    <div class="container py-4 mb-5" >
+        <div class="row">
+            <div class="col-md-6 p-4 ">
+                <h5 class="section-title">
+                    About us
+                </h5>
+                <h1 style="font-weight: 700;">
+                    Welcome to <span class="section-title">Hotel Book</span>
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero et veritatis provident esse obcaecati fugiat voluptatibus, aut in. Perspiciatis autem dignissimos ratione tempora in, repellendus asperiores omnis eum eius laboriosam.
+                </p>
+            
+                <div class="row g-3 pb-4 mb-4">
+                    <div class="col-md-4 p-1 border border-gray">
+                        <div class="w-100 h-100 border border-gray p-3 d-flex flex-column align-items-center justify-content-center">
+                            <div class="mb-2">
+                                <i class="about-icon fa-solid fa-house"></i>
+                            </div>
+                            <h1 class="mb-1" style="font-weight: 700;">
+                                1234
+                            </h1>
+                            <p>Rooms</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-1 border border-gray">
+                        <div class="w-100 h-100 border border-gray p-3 d-flex flex-column align-items-center justify-content-center">
+                            <div class="mb-2">
+                                <i class="about-icon fa-solid fa-person"></i>
+                            </div>
+                            <h1 class="mb-1" style="font-weight: 700;">
+                                1234
+                            </h1>
+                            <p>Staffs</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-1 border border-gray">
+                        <div class="w-100 h-100 border border-gray p-3 d-flex flex-column align-items-center justify-content-center">
+                            <div class="mb-2">
+                                <i class="about-icon fa-solid fa-user-nurse"></i>
+                            </div>
+                            <h1 class="mb-1" style="font-weight: 700;">
+                                1234
+                            </h1>
+                            <p>Rooms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 explore-btn">
+                        <a href="#" class="btn btn-warning p-3" style="width: 100%; font-weight: 700; color: white; text-transform: uppercase;">
+                            Explore More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-2">
+                    <div class="col-md-6" style=" display: flex; align-items: center; justify-content: center;">
+                        <img src="./img/about-1.jpg" alt="" width="80%" height="80%">
+                    </div>
+                    <div class="col-md-6" style=" display: flex; align-items: center; justify-content: center;">
+                        <img src="./img/about-2.jpg" alt="" width="80%" height="80%">
+                    </div>
+                    <div class="col-md-6" style=" display: flex; align-items: center; justify-content: center;">
+                        <img src="./img/about-3.jpg" alt="" width="80%" height="80%">
+                    </div>
+                    <div class="col-md-6" style=" display: flex; align-items: center; justify-content: center;">
+                        <img src="./img/about-4.jpg" alt="" width="80%" height="80%">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Rooms -->
+
+    <div class="container mb-5 py-4">
+        <div class="row">
+            <div class="col-md-12" style=" text-align: center;">
+                <h5 class="section-title">
+                    Our Rooms
+                </h5>
+            </div>
+            <div class="col-md-12 mb-5" style=" text-align: center;">
+                <h2 style="font-weight: 700;">
+                    Explore Our <span class="room-title">ROOMS</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 p-2 mb-4">
+                <div class="room-card" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="image-wrapper" style="position: relative;">
+                        <img src="./img/room-1.jpg" alt="room-1" class="image-fluid" width="100%" height="100%"> 
+                        <span class="price-info-card">
+                            $100/Night
+                        </span>
+                    </div>
+                    <div class="p-2" style="background-color: white;">
+                        <div class="mb-2 width-100 d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <span class="room-name">
+                                Junior Suite
+                            </span>
+                            <span style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="mb-2 d-flex flex-row align-items-center ">
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bed"></i>
+                                3 Bed
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bath"></i>
+                                2 Bath
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-wifi"></i>
+                                Wifi
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores adipisci, laborum odit, corporis minima pariatur fuga vitae laboriosam iure porro, saepe suscipit aperiam quia?
+                        </div>
+                        <div class="button-wrapper d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <a class="btn btn-warning px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                view detail
+                            </a>
+                            <a class="book-btn btn px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                book now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2 mb-4">
+                <div class="room-card" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="image-wrapper" style="position: relative;">
+                        <img src="./img/room-2.jpg" alt="room-1" class="image-fluid" width="100%" height="100%"> 
+                        <span class="price-info-card">
+                            $120/Night
+                        </span>
+                    </div>
+                    <div class="p-2" style="background-color: white;">
+                        <div class="mb-2 width-100 d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <span class="room-name">
+                                Executive Suite
+                            </span>
+                            <span style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="mb-2 d-flex flex-row align-items-center ">
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bed"></i>
+                                2 Bed
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bath"></i>
+                                1 Bath
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-wifi"></i>
+                                Wifi
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores adipisci, laborum odit, corporis minima pariatur fuga vitae laboriosam iure porro, saepe suscipit aperiam quia?
+                        </div>
+                        <div class="button-wrapper d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <a class="btn btn-warning px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                view detail
+                            </a>
+                            <a class="book-btn btn px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                book now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2 mb-4">
+                <div class="room-card" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="image-wrapper" style="position: relative;">
+                        <img src="./img/room-1.jpg" alt="room-1" class="image-fluid" width="100%" height="100%"> 
+                        <span class="price-info-card">
+                            $200/Night
+                        </span>
+                    </div>
+                    <div class="p-2" style="background-color: white;">
+                        <div class="mb-2 width-100 d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <span class="room-name">
+                                Super Deluxe
+                            </span>
+                            <span style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="mb-2 d-flex flex-row align-items-center ">
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bed"></i>
+                                3 Bed
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bath"></i>
+                                2 Bath
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-wifi"></i>
+                                Wifi
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores adipisci, laborum odit, corporis minima pariatur fuga vitae laboriosam iure porro, saepe suscipit aperiam quia?
+                        </div>
+                        <div class="button-wrapper d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <a class="btn btn-warning px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                view detail
+                            </a>
+                            <a class="book-btn btn px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                book now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2 mb-4">
+                <div class="room-card" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="image-wrapper" style="position: relative;">
+                        <img src="./img/room-3.jpg" alt="room-1" class="image-fluid" width="100%" height="100%"> 
+                        <span class="price-info-card">
+                            $100/Night
+                        </span>
+                    </div>
+                    <div class="p-2" style="background-color: white;">
+                        <div class="mb-2 width-100 d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <span class="room-name">
+                                Junior Suite
+                            </span>
+                            <span style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="mb-2 d-flex flex-row align-items-center ">
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bed"></i>
+                                3 Bed
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-bath"></i>
+                                2 Bath
+                            </span>
+                            <span class="room-info-wrapper">
+                                <i class="fa-solid fa-wifi"></i>
+                                Wifi
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores adipisci, laborum odit, corporis minima pariatur fuga vitae laboriosam iure porro, saepe suscipit aperiam quia?
+                        </div>
+                        <div class="button-wrapper d-flex flex-row align-items-center" style="justify-content: space-between;">
+                            <a class="btn btn-warning px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                view detail
+                            </a>
+                            <a class="book-btn btn px-4" href="#" style="color: white; font-weight: 700; text-transform: uppercase;">
+                                book now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-2 mt-4 mb-4">
+        <div class="row">
+            <div class="col-md-6 p-3 bg-dark d-flex align-items-center">
+                <div class="row">
+                    <div class="col-md-12 mb-2">
+                        <h5 class="section-title text-white">
+                            Luxury Living
+                        </h5>
+                    </div>
+                    <div class="col-md-10 mb-2">
+                        <h2 class="text-white fw-bold">
+                            Discover A Brand Luxurious Hotel
+                        </h2>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <p class="text-white">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae similique autem, labore esse quod libero cupiditate architecto harum officiis deleniti nisi excepturi expedita debitis aliquam.
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-warning w-100 text-white fw-bold text-uppercase" style="border-radius: 0px;">
+                                    Our Rooms
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-light w-100 text-black fw-bold text-uppercase" style="border-radius: 0px;">
+                                    Our Rooms
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="./img/about-4.jpg" alt="" class="w-100 h-100 image-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4 mt-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h5 class="section-title">
+                    our services
+                </h5>
+            </div>
+            <div class="col-md-12 mb-5" style=" text-align: center;">
+                <h2 style="font-weight: 700;">
+                    Explore Our <span class="room-title">services</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-md-4 p-3">
+                <div class="service-card p-3 d-flex flex-column align-items-center justify-content-center"
+                style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;"> 
+                        <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;">
+                            <i class="bi bi-water services-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="service-title">
+                            Rooms & Apartment
+                        </h5>
+                    </div>
+
+                    <div class="mt-2 text-center">
+                        <p class="service-desc">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut inventore quibusdam, recusandae nesciunt fugiat modi?
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="service-card p-3 d-flex flex-column align-items-center justify-content-center"
+                style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;"> 
+                        <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;">
+                            <i class="fa-solid fa-bowl-food services-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="service-title">
+                            Food & Restaturant
+                        </h5>
+                    </div>
+
+                    <div class="mt-2 text-center">
+                        <p class="service-desc">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut inventore quibusdam, recusandae nesciunt fugiat modi?
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="service-card p-3 d-flex flex-column align-items-center justify-content-center"
+                style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;"> 
+                        <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;">
+                            <i class="fa-solid fa-spa services-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="service-title">
+                            Spa & Fitness
+                        </h5>
+                    </div>
+
+                    <div class="mt-2 text-center">
+                        <p class="service-desc">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut inventore quibusdam, recusandae nesciunt fugiat modi?
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="service-card p-3 d-flex flex-column align-items-center justify-content-center"
+                style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;"> 
+                        <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;">
+                            <i class="bi bi-water services-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="service-title">
+                            Sports
+                        </h5>
+                    </div>
+
+                    <div class="mt-2 text-center">
+                        <p class="service-desc">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut inventore quibusdam, recusandae nesciunt fugiat modi?
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="service-card p-3 d-flex flex-column align-items-center justify-content-center"
+                style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;"> 
+                        <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;">
+                            <i class="fa-solid fa-gift services-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="service-title">
+                            Event & Party
+                        </h5>
+                    </div>
+
+                    <div class="mt-2 text-center">
+                        <p class="service-desc">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut inventore quibusdam, recusandae nesciunt fugiat modi?
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="service-card p-3 d-flex flex-column align-items-center justify-content-center"
+                style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+                    <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;"> 
+                        <div class="p-1" style="border: 1px solid rgb(173, 172, 172); padding-inline: 4px;">
+                            <i class="bi bi-water services-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="service-title">
+                            Meditation
+                        </h5>
+                    </div>
+
+                    <div class="mt-2 text-center">
+                        <p class="service-desc">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut inventore quibusdam, recusandae nesciunt fugiat modi?
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-4 mt-4" style=" padding-top: 64px;">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h5 class="section-title">
+                    our teams
+                </h5>
+            </div>
+            <div class="col-md-12 mb-5" style=" text-align: center;">
+                <h2 style="font-weight: 700;">
+                    Explore Our <span class="room-title">staffs</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-md-3 p-2">
+                <div class="p-2" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); height: 100%;">
+                    <div style="position: relative;">
+                        <img src="./img/team-1.jpg" alt="" class="w-100">
+                        <div class="icon-container">
+                            <span class="icon-wrappper">
+                                <i class="bi bi-instagram team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-twitter team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-linkedin team-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center" style="padding-top: 12px;">
+                        <h5>
+                            Sarah Johnson
+                        </h5>
+                        <p>
+                            Lead UX/UI Designer with 8 years of experience in creating intuitive digital experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-3 p-2">
+                <div class="p-2" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); height: 100%;">
+                    <div style="position: relative;">
+                        <img src="./img/team-2.jpg" alt="" class="w-100">
+                        <div class="icon-container">
+                            <span class="icon-wrappper">
+                                <i class="bi bi-instagram team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-twitter team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-linkedin team-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center" style="padding-top: 12px;">
+                        <h5>
+                            Michael Anderson
+                        </h5>
+                        <p>
+                            Senior Software Engineer specialized in full-stack development with a passion for problem-solving.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-3 p-2">
+                <div class="p-2" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); height: 100%;">
+                    <div style="position: relative;">
+                        <img src="./img/team-3.jpg" alt="" class="w-100">
+                        <div class="icon-container">
+                            <span class="icon-wrappper">
+                                <i class="bi bi-instagram team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-twitter team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-linkedin team-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center" style="padding-top: 12px;">
+                        <h5>
+                            Emily Turner
+                        </h5>
+                        <p>
+                            Project Manager with expertise in agile methodologies and leading cross-functional teams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-3 p-2">
+                <div class="p-2" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); height: 100%;">
+                    <div style="position: relative;">
+                        <img src="./img/team-4.jpg" alt="" class="w-100">
+                        <div class="icon-container">
+                            <span class="icon-wrappper">
+                                <i class="bi bi-instagram team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-twitter team-icon"></i>
+                            </span>
+                            <span class="icon-wrappper">
+                                <i class="bi bi-linkedin team-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center" style="padding-top: 12px;">
+                        <h5>
+                            David Kim
+                        </h5>
+                        <p>
+                            Digital Marketing Specialist skilled in SEO, content strategy, and brand awareness campaigns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container-fluid bg-dark">
+        <div class="row g-2 p-3 ">
+            <div class="col-md-3 p-3">
+                <div class="row footer-hotel-info">
+                    <div class="col-md-12">
+                        <h2 class="text-uppercase text-white fw-bold">
+                            Hotel Book
+                        </h2>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                        <p class="text-white">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolorum. Voluptatum in dolore fugiat veniam temporibus, amet deleniti corporis tempora.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="section-title">
+                            contact
+                        </h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-location-dot footer-icon"></i>
+                            <span class="footer-info-text">
+                                222 Street, New York
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-phone footer-icon"></i>
+                            <span class="footer-info-text">
+                                +555 555 55 55 
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-envelope footer-icon"></i>
+                            <span class="footer-info-text">
+                                hotelbooking@gmail.com
+                            </span>
+                        </div>
+                        <div class="footer-icons d-flex flex-row align-items-center justify-content-start ">
+                            <span class="footer-bottom-icon-wrapper">
+                                <a href="#">
+                                    <i class="fa-brands fa-square-instagram "></i>
+                                </a>
+                            </span>
+                            <span class="footer-bottom-icon-wrapper">
+                                <a href="#">
+                                    <i class="fa-brands fa-square-twitter "></i>
+                                </a>
+                            </span>
+                            <span class="footer-bottom-icon-wrapper">
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>                
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="section-title">
+                            company
+                        </h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                About Us
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Contact Us
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Privacy Policy
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Terms & Condition
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Support
+                            </span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="section-title">
+                            services
+                        </h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Food & Restaturant
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Spa & Fitness
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Sports & Games
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Event & Party
+                            </span>
+                        </div>
+                        <div class="footer-info-wrapper d-flex flex-row align-items-center">
+                            <i class="fa-solid fa-angle-right footer-icon"></i>
+                            <span class="footer-info-text">
+                                Gym & Yoga
+                            </span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- jquuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
